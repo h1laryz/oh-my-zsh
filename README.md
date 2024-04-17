@@ -2,7 +2,7 @@
 
 To install on Ubuntu:
 `
-sh ./install.sh
+git clone https://github.com/h1laryz/oh-my-zsh && cd ./oh-my-zsh && sh ./install.sh
 `
 
 ![alt text](./oh-my-zsh.png)
