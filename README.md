@@ -1,4 +1,4 @@
-# h1lary theme
+# oh-my-zsh h1lary theme
 
 To install on Ubuntu:
 `
