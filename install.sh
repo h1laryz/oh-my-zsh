@@ -1,19 +1,14 @@
 #!/bin/bash
 
-sudo apt install -y zsh
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-cp h1lary.zsh-theme ~/.oh_my_zsh/themes/
+cp ${SCRIPT_DIR}/h1lary.zsh-theme ~/.oh-my-zsh/themes/
 
-echo 'ZSH_THEME="h1lary"' >> ~/.zshrc
+mv ~/.zshrc ~/.zshrc.backup
 
-echo 'plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highlighting)' >> ~/.zshrc
-
-echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
-echo 'export PATH="$PATH:/snap/bin"' >> ~/.zshrc
-echo 'export PATH="$PATH:~/.local/lib/python3.10/site-packages"' >> ~/.zshrc
-echo 'export PATH="$PATH:/home/$USER/.local/bin/"' >> ~/.zshrc
-echo 'export PATH="$PATH:/home/$USER/.local/share/nvim/mason/bin/"' >> ~/.zshrc
+cp ${SCRIPT_DIR}/.zshrc ~/
 
 source ~/.zshrc
