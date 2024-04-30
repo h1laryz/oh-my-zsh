@@ -1,8 +1,15 @@
 # oh-my-zsh h1lary theme
 
 To install on Ubuntu:
+
+## Install oh-my-zsh
 `
-git clone https://github.com/h1laryz/oh-my-zsh && cd ./oh-my-zsh && sh ./install.sh
+sh ./install_base.sh
+`
+
+## Install custom theme & plugins and so on
+`
+sh ./install.sh
 `
 
 ![alt text](./oh-my-zsh.png)
